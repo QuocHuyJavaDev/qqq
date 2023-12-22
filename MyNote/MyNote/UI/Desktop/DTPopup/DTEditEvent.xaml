@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyNote.UI.Desktop.DTPopup.DTEditEvent"
+             Title="DTEditEvent">
+    <Grid BackgroundColor="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="1,0">
+                <GradientStop Color="#f1f1f1"
+                          Offset="0.1" />
+                <GradientStop Color="#e7e7e7"
+                          Offset="1.0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Frame BorderColor="Transparent" Grid.Row="0" Padding="5">
+            <Frame.Background>
+                <LinearGradientBrush EndPoint="1,0">
+                    <GradientStop Color="#f1f1f1"
+                          Offset="0.1" />
+                    <GradientStop Color="#e7e7e7"
+                          Offset="1.0" />
+                </LinearGradientBrush>
+            </Frame.Background>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Text="EDIT SCHEDULE" TextColor="#C664BE" FontFamily="InterExtraBold"
+                       FontAttributes="Bold" FontSize="18" Margin="10,5,0,0" 
+                       VerticalOptions="CenterAndExpand"/>
+                <Button Grid.Column="1" Text="Save" WidthRequest="60" TextColor="#C664BE"
+                Clicked="Save_Click" BackgroundColor="Transparent" HorizontalOptions="End"
+                        HeightRequest="32" CornerRadius="10" FontFamily="InterMedium"
+                        FontAttributes="Bold" Padding="0" FontSize="13" BorderColor="#C664BE"
+                        BorderWidth="2" Margin="0,5,10,0" VerticalOptions="CenterAndExpand"/>
+            </Grid>
+
+        </Frame>
+        <Frame Grid.Row="1" BackgroundColor="#C664BE" HeightRequest="2" 
+               VerticalOptions="StartAndExpand" Padding="5"/>
+        <Frame Grid.Row="1" BackgroundColor="Transparent" BorderColor="Transparent">
+            <ScrollView>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="190" />
+                        <RowDefinition Height="190" />
+                        <RowDefinition Height="100" />
+                    </Grid.RowDefinitions>
+                    <Frame Grid.Row="0" BackgroundColor="Transparent" Padding="0"
+                   HorizontalOptions="FillAndExpand" CornerRadius="20" Margin="20,20,20,0"
+                   BorderColor="Transparent">
+                        <StackLayout Spacing="10">
+                            <Label Text="Time Start"  Margin="10,10,0,0" FontFamily="InterBold"
+                       FontAttributes="Bold" TextColor="#C664BE"/>
+                            <Frame BackgroundColor="White" Padding="0"
+                   HorizontalOptions="FillAndExpand" CornerRadius="20" Margin="0,0,0,0"
+                   BorderColor="Transparent" HeightRequest="55">
+                                <HorizontalStackLayout>
+                                    <Image Source="calendarr.png" HeightRequest="30" Margin="10,3,0,0" VerticalOptions="CenterAndExpand"/>
+                                    <DatePicker x:Name="dayStart" BackgroundColor="Transparent" HeightRequest="65"
+                            Margin="10,0,10,0" FontFamily="InterBold" FontSize="16" Format="dd/MM/yyyy"
+                            FontAttributes="Bold"/>
+                                </HorizontalStackLayout>
+                            </Frame>
+                            <Frame BackgroundColor="White" Padding="0"
+                   HorizontalOptions="FillAndExpand" CornerRadius="20" Margin="0,0,0,0"
+                   BorderColor="Transparent" HeightRequest="55">
+                                <HorizontalStackLayout>
+                                    <Image Source="watch.png" HeightRequest="30" Margin="10,3,0,0" VerticalOptions="CenterAndExpand"/>
+                                    <TimePicker x:Name="timeStarr" BackgroundColor="Transparent" HeightRequest="65"
+                            Margin="10,35,10,0" FontFamily="InterBold" FontSize="16" VerticalOptions="CenterAndExpand"
+                            FontAttributes="Bold" Format="HH:mm"/>
+                                </HorizontalStackLayout>
+                            </Frame>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame Grid.Row="1" BackgroundColor="Transparent" Padding="0"
+                   HorizontalOptions="FillAndExpand" CornerRadius="20" Margin="20,20,20,0"
+                   BorderColor="Transparent">
+                        <StackLayout Spacing="10">
+                            <Label Text="Time End"  Margin="10,10,0,0" FontFamily="InterBold"
+                       FontAttributes="Bold" TextColor="#C664BE"/>
+                            <Frame BackgroundColor="White" Padding="0"
+                   HorizontalOptions="FillAndExpand" CornerRadius="20" Margin="0,0,0,0"
+                   BorderColor="Transparent" HeightRequest="55">
+                                <HorizontalStackLayout>
+                                    <Image Source="calendarr.png" HeightRequest="30" Margin="10,3,0,0" VerticalOptions="CenterAndExpand"/>
+                                    <DatePicker x:Name="dayEnd" BackgroundColor="Transparent" HeightRequest="65"
+                            Margin="10,0,10,0" FontFamily="InterBold" FontSize="16" Format="dd/MM/yyyy"
+                            FontAttributes="Bold"/>
+                                </HorizontalStackLayout>
+                            </Frame>
+                            <Frame BackgroundColor="White" Padding="0"
+                   HorizontalOptions="FillAndExpand" CornerRadius="20" Margin="0,0,0,0"
+                   BorderColor="Transparent" HeightRequest="55">
+                                <HorizontalStackLayout>
+                                    <Image Source="watch.png" HeightRequest="30" Margin="10,3,0,0" VerticalOptions="CenterAndExpand"/>
+                                    <TimePicker x:Name="timeEnd" BackgroundColor="Transparent" HeightRequest="65"
+                            Margin="10,35,10,0" FontFamily="InterBold" FontSize="16"
+                            FontAttributes="Bold" Format="HH:mm"/>
+                                </HorizontalStackLayout>
+                            </Frame>
+                        </StackLayout>
+                    </Frame>
+                    <Frame Grid.Row="2" BackgroundColor="White" Padding="0"
+                   HorizontalOptions="FillAndExpand" CornerRadius="20" Margin="20,0,20,0"
+                   BorderColor="Transparent" HeightRequest="55">
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="notess.png" HeightRequest="30" Margin="10,3,0,0" VerticalOptions="CenterAndExpand"
+                                   />
+                            <Entry HeightRequest="65" x:Name="txtEventName" Placeholder="Event name" PlaceholderColor="#cdcdcd"
+                           FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand"
+                           Margin="20,0,20,0" FontFamily="InterRegular" FontSize="16" TextColor="#737373"/>
+                        </StackLayout>
+                    </Frame>
+                </Grid>
+            </ScrollView>
+        </Frame>
+    </Grid>
+</ContentPage>

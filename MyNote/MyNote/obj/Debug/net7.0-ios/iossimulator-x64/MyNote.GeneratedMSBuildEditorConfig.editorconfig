@@ -1,0 +1,293 @@
+is_global = true
+build_property.TargetFramework = net7.0-ios
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = MyNote
+build_property.ProjectDir = C:\Users\QUOCHUY\source\repos\MyNote\MyNote\
+
+[C:/Users/QUOCHUY/source/repos/MyNote/MyNote/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/QUOCHUY/source/repos/MyNote/MyNote/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Users/QUOCHUY/source/repos/MyNote/MyNote/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[C:/Users/QUOCHUY/source/repos/MyNote/MyNote/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Users/QUOCHUY/source/repos/MyNote/MyNote/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/Users/QUOCHUY/source/repos/MyNote/MyNote/UI/Desktop/DTPopup/DTAddEvent.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.UI.Desktop.DTPopup.DTAddEvent.xaml
+build_metadata.AdditionalFiles.TargetPath = UI\Desktop\DTPopup\DTAddEvent.xaml
+build_metadata.AdditionalFiles.RelativePath = UI\Desktop\DTPopup\DTAddEvent.xaml
+
+[C:/Users/QUOCHUY/source/repos/MyNote/MyNote/UI/Desktop/DTPopup/DTAddNtb.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.UI.Desktop.DTPopup.DTAddNtb.xaml
+build_metadata.AdditionalFiles.TargetPath = UI\Desktop\DTPopup\DTAddNtb.xaml
+build_metadata.AdditionalFiles.RelativePath = UI\Desktop\DTPopup\DTAddNtb.xaml
+
+[C:/Users/QUOCHUY/source/repos/MyNote/MyNote/UI/Desktop/DTPopup/DTEditEvent.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.UI.Desktop.DTPopup.DTEditEvent.xaml
+build_metadata.AdditionalFiles.TargetPath = UI\Desktop\DTPopup\DTEditEvent.xaml
+build_metadata.AdditionalFiles.RelativePath = UI\Desktop\DTPopup\DTEditEvent.xaml
+
+[C:/Users/QUOCHUY/source/repos/MyNote/MyNote/UI/Desktop/DTPopup/DTEditNtb.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.UI.Desktop.DTPopup.DTEditNtb.xaml
+build_metadata.AdditionalFiles.TargetPath = UI\Desktop\DTPopup\DTEditNtb.xaml
+build_metadata.AdditionalFiles.RelativePath = UI\Desktop\DTPopup\DTEditNtb.xaml
+
+[C:/Users/QUOCHUY/source/repos/MyNote/MyNote/UI/Desktop/LoginRegister/DTAddInfor.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.UI.Desktop.LoginRegister.DTAddInfor.xaml
+build_metadata.AdditionalFiles.TargetPath = UI\Desktop\LoginRegister\DTAddInfor.xaml
+build_metadata.AdditionalFiles.RelativePath = UI\Desktop\LoginRegister\DTAddInfor.xaml
+
+[C:/Users/QUOCHUY/source/repos/MyNote/MyNote/UI/Desktop/LoginRegister/DTLogin.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.UI.Desktop.LoginRegister.DTLogin.xaml
+build_metadata.AdditionalFiles.TargetPath = UI\Desktop\LoginRegister\DTLogin.xaml
+build_metadata.AdditionalFiles.RelativePath = UI\Desktop\LoginRegister\DTLogin.xaml
+
+[C:/Users/QUOCHUY/source/repos/MyNote/MyNote/UI/Desktop/LoginRegister/DTRegister.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.UI.Desktop.LoginRegister.DTRegister.xaml
+build_metadata.AdditionalFiles.TargetPath = UI\Desktop\LoginRegister\DTRegister.xaml
+build_metadata.AdditionalFiles.RelativePath = UI\Desktop\LoginRegister\DTRegister.xaml
+
+[C:/Users/QUOCHUY/source/repos/MyNote/MyNote/UI/Desktop/MainDesktop/DTAbout.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.UI.Desktop.MainDesktop.DTAbout.xaml
+build_metadata.AdditionalFiles.TargetPath = UI\Desktop\MainDesktop\DTAbout.xaml
+build_metadata.AdditionalFiles.RelativePath = UI\Desktop\MainDesktop\DTAbout.xaml
+
+[C:/Users/QUOCHUY/source/repos/MyNote/MyNote/UI/Desktop/MainDesktop/DTAccount.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.UI.Desktop.MainDesktop.DTAccount.xaml
+build_metadata.AdditionalFiles.TargetPath = UI\Desktop\MainDesktop\DTAccount.xaml
+build_metadata.AdditionalFiles.RelativePath = UI\Desktop\MainDesktop\DTAccount.xaml
+
+[C:/Users/QUOCHUY/source/repos/MyNote/MyNote/UI/Desktop/MainDesktop/DTAllDetail.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.UI.Desktop.MainDesktop.DTAllDetail.xaml
+build_metadata.AdditionalFiles.TargetPath = UI\Desktop\MainDesktop\DTAllDetail.xaml
+build_metadata.AdditionalFiles.RelativePath = UI\Desktop\MainDesktop\DTAllDetail.xaml
+
+[C:/Users/QUOCHUY/source/repos/MyNote/MyNote/UI/Desktop/MainDesktop/DTAllNote.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.UI.Desktop.MainDesktop.DTAllNote.xaml
+build_metadata.AdditionalFiles.TargetPath = UI\Desktop\MainDesktop\DTAllNote.xaml
+build_metadata.AdditionalFiles.RelativePath = UI\Desktop\MainDesktop\DTAllNote.xaml
+
+[C:/Users/QUOCHUY/source/repos/MyNote/MyNote/UI/Desktop/MainDesktop/DTHome.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.UI.Desktop.MainDesktop.DTHome.xaml
+build_metadata.AdditionalFiles.TargetPath = UI\Desktop\MainDesktop\DTHome.xaml
+build_metadata.AdditionalFiles.RelativePath = UI\Desktop\MainDesktop\DTHome.xaml
+
+[C:/Users/QUOCHUY/source/repos/MyNote/MyNote/UI/Desktop/MainDesktop/DTNotebook.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.UI.Desktop.MainDesktop.DTNotebook.xaml
+build_metadata.AdditionalFiles.TargetPath = UI\Desktop\MainDesktop\DTNotebook.xaml
+build_metadata.AdditionalFiles.RelativePath = UI\Desktop\MainDesktop\DTNotebook.xaml
+
+[C:/Users/QUOCHUY/source/repos/MyNote/MyNote/UI/Desktop/MainDesktop/DTNoteDetail.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.UI.Desktop.MainDesktop.DTNoteDetail.xaml
+build_metadata.AdditionalFiles.TargetPath = UI\Desktop\MainDesktop\DTNoteDetail.xaml
+build_metadata.AdditionalFiles.RelativePath = UI\Desktop\MainDesktop\DTNoteDetail.xaml
+
+[C:/Users/QUOCHUY/source/repos/MyNote/MyNote/UI/Desktop/MainDesktop/DTNoteList.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.UI.Desktop.MainDesktop.DTNoteList.xaml
+build_metadata.AdditionalFiles.TargetPath = UI\Desktop\MainDesktop\DTNoteList.xaml
+build_metadata.AdditionalFiles.RelativePath = UI\Desktop\MainDesktop\DTNoteList.xaml
+
+[C:/Users/QUOCHUY/source/repos/MyNote/MyNote/UI/Desktop/MainDesktop/DTPLR.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.UI.Desktop.MainDesktop.DTPLR.xaml
+build_metadata.AdditionalFiles.TargetPath = UI\Desktop\MainDesktop\DTPLR.xaml
+build_metadata.AdditionalFiles.RelativePath = UI\Desktop\MainDesktop\DTPLR.xaml
+
+[C:/Users/QUOCHUY/source/repos/MyNote/MyNote/UI/Desktop/MainDesktop/DTSchedule.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.UI.Desktop.MainDesktop.DTSchedule.xaml
+build_metadata.AdditionalFiles.TargetPath = UI\Desktop\MainDesktop\DTSchedule.xaml
+build_metadata.AdditionalFiles.RelativePath = UI\Desktop\MainDesktop\DTSchedule.xaml
+
+[C:/Users/QUOCHUY/source/repos/MyNote/MyNote/UI/Desktop/MainDesktop/DTTask.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.UI.Desktop.MainDesktop.DTTask.xaml
+build_metadata.AdditionalFiles.TargetPath = UI\Desktop\MainDesktop\DTTask.xaml
+build_metadata.AdditionalFiles.RelativePath = UI\Desktop\MainDesktop\DTTask.xaml
+
+[C:/Users/QUOCHUY/source/repos/MyNote/MyNote/UI/Desktop/MainDesktop/DTTodo.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.UI.Desktop.MainDesktop.DTTodo.xaml
+build_metadata.AdditionalFiles.TargetPath = UI\Desktop\MainDesktop\DTTodo.xaml
+build_metadata.AdditionalFiles.RelativePath = UI\Desktop\MainDesktop\DTTodo.xaml
+
+[C:/Users/QUOCHUY/source/repos/MyNote/MyNote/UI/Desktop/MainDesktop/NewPage1.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.UI.Desktop.MainDesktop.NewPage1.xaml
+build_metadata.AdditionalFiles.TargetPath = UI\Desktop\MainDesktop\NewPage1.xaml
+build_metadata.AdditionalFiles.RelativePath = UI\Desktop\MainDesktop\NewPage1.xaml
+
+[C:/Users/QUOCHUY/source/repos/MyNote/MyNote/UI/Desktop/ShellBase.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.UI.Desktop.ShellBase.xaml
+build_metadata.AdditionalFiles.TargetPath = UI\Desktop\ShellBase.xaml
+build_metadata.AdditionalFiles.RelativePath = UI\Desktop\ShellBase.xaml
+
+[C:/Users/QUOCHUY/source/repos/MyNote/MyNote/UI/Mobile/LogRegIntr/Intro.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.UI.Mobile.LogRegIntr.Intro.xaml
+build_metadata.AdditionalFiles.TargetPath = UI\Mobile\LogRegIntr\Intro.xaml
+build_metadata.AdditionalFiles.RelativePath = UI\Mobile\LogRegIntr\Intro.xaml
+
+[C:/Users/QUOCHUY/source/repos/MyNote/MyNote/UI/Mobile/LogRegIntr/MbForgot.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.UI.Mobile.LogRegIntr.MbForgot.xaml
+build_metadata.AdditionalFiles.TargetPath = UI\Mobile\LogRegIntr\MbForgot.xaml
+build_metadata.AdditionalFiles.RelativePath = UI\Mobile\LogRegIntr\MbForgot.xaml
+
+[C:/Users/QUOCHUY/source/repos/MyNote/MyNote/UI/Mobile/LogRegIntr/MbInfor.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.UI.Mobile.LogRegIntr.MbInfor.xaml
+build_metadata.AdditionalFiles.TargetPath = UI\Mobile\LogRegIntr\MbInfor.xaml
+build_metadata.AdditionalFiles.RelativePath = UI\Mobile\LogRegIntr\MbInfor.xaml
+
+[C:/Users/QUOCHUY/source/repos/MyNote/MyNote/UI/Mobile/LogRegIntr/MbLogin.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.UI.Mobile.LogRegIntr.MbLogin.xaml
+build_metadata.AdditionalFiles.TargetPath = UI\Mobile\LogRegIntr\MbLogin.xaml
+build_metadata.AdditionalFiles.RelativePath = UI\Mobile\LogRegIntr\MbLogin.xaml
+
+[C:/Users/QUOCHUY/source/repos/MyNote/MyNote/UI/Mobile/LogRegIntr/MbRegister.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.UI.Mobile.LogRegIntr.MbRegister.xaml
+build_metadata.AdditionalFiles.TargetPath = UI\Mobile\LogRegIntr\MbRegister.xaml
+build_metadata.AdditionalFiles.RelativePath = UI\Mobile\LogRegIntr\MbRegister.xaml
+
+[C:/Users/QUOCHUY/source/repos/MyNote/MyNote/UI/Mobile/MbShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.UI.Mobile.MbShell.xaml
+build_metadata.AdditionalFiles.TargetPath = UI\Mobile\MbShell.xaml
+build_metadata.AdditionalFiles.RelativePath = UI\Mobile\MbShell.xaml
+
+[C:/Users/QUOCHUY/source/repos/MyNote/MyNote/UI/Mobile/PopupView/AddNtb.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.UI.Mobile.PopupView.AddNtb.xaml
+build_metadata.AdditionalFiles.TargetPath = UI\Mobile\PopupView\AddNtb.xaml
+build_metadata.AdditionalFiles.RelativePath = UI\Mobile\PopupView\AddNtb.xaml
+
+[C:/Users/QUOCHUY/source/repos/MyNote/MyNote/UI/Mobile/PopupView/EditNtb.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.UI.Mobile.PopupView.EditNtb.xaml
+build_metadata.AdditionalFiles.TargetPath = UI\Mobile\PopupView\EditNtb.xaml
+build_metadata.AdditionalFiles.RelativePath = UI\Mobile\PopupView\EditNtb.xaml
+
+[C:/Users/QUOCHUY/source/repos/MyNote/MyNote/UI/Mobile/PopupView/MbAddEvent.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.UI.Mobile.PopupView.MbAddEvent.xaml
+build_metadata.AdditionalFiles.TargetPath = UI\Mobile\PopupView\MbAddEvent.xaml
+build_metadata.AdditionalFiles.RelativePath = UI\Mobile\PopupView\MbAddEvent.xaml
+
+[C:/Users/QUOCHUY/source/repos/MyNote/MyNote/UI/Mobile/PopupView/MbEditEvent.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.UI.Mobile.PopupView.MbEditEvent.xaml
+build_metadata.AdditionalFiles.TargetPath = UI\Mobile\PopupView\MbEditEvent.xaml
+build_metadata.AdditionalFiles.RelativePath = UI\Mobile\PopupView\MbEditEvent.xaml
+
+[C:/Users/QUOCHUY/source/repos/MyNote/MyNote/UI/Mobile/ShellMain/MbFavorDetail.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.UI.Mobile.ShellMain.MbFavorDetail.xaml
+build_metadata.AdditionalFiles.TargetPath = UI\Mobile\ShellMain\MbFavorDetail.xaml
+build_metadata.AdditionalFiles.RelativePath = UI\Mobile\ShellMain\MbFavorDetail.xaml
+
+[C:/Users/QUOCHUY/source/repos/MyNote/MyNote/UI/Mobile/ShellMain/MbHome.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.UI.Mobile.ShellMain.MbHome.xaml
+build_metadata.AdditionalFiles.TargetPath = UI\Mobile\ShellMain\MbHome.xaml
+build_metadata.AdditionalFiles.RelativePath = UI\Mobile\ShellMain\MbHome.xaml
+
+[C:/Users/QUOCHUY/source/repos/MyNote/MyNote/UI/Mobile/ShellMain/MbNDetail.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.UI.Mobile.ShellMain.MbNDetail.xaml
+build_metadata.AdditionalFiles.TargetPath = UI\Mobile\ShellMain\MbNDetail.xaml
+build_metadata.AdditionalFiles.RelativePath = UI\Mobile\ShellMain\MbNDetail.xaml
+
+[C:/Users/QUOCHUY/source/repos/MyNote/MyNote/UI/Mobile/ShellMain/MbNotebook.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.UI.Mobile.ShellMain.MbNotebook.xaml
+build_metadata.AdditionalFiles.TargetPath = UI\Mobile\ShellMain\MbNotebook.xaml
+build_metadata.AdditionalFiles.RelativePath = UI\Mobile\ShellMain\MbNotebook.xaml
+
+[C:/Users/QUOCHUY/source/repos/MyNote/MyNote/UI/Mobile/ShellMain/MBNoteList.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.UI.Mobile.ShellMain.MBNoteList.xaml
+build_metadata.AdditionalFiles.TargetPath = UI\Mobile\ShellMain\MBNoteList.xaml
+build_metadata.AdditionalFiles.RelativePath = UI\Mobile\ShellMain\MBNoteList.xaml
+
+[C:/Users/QUOCHUY/source/repos/MyNote/MyNote/UI/Mobile/ShellMain/MbPLR.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.UI.Mobile.ShellMain.MbPLR.xaml
+build_metadata.AdditionalFiles.TargetPath = UI\Mobile\ShellMain\MbPLR.xaml
+build_metadata.AdditionalFiles.RelativePath = UI\Mobile\ShellMain\MbPLR.xaml
+
+[C:/Users/QUOCHUY/source/repos/MyNote/MyNote/UI/Mobile/ShellMain/MbSchedule.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.UI.Mobile.ShellMain.MbSchedule.xaml
+build_metadata.AdditionalFiles.TargetPath = UI\Mobile\ShellMain\MbSchedule.xaml
+build_metadata.AdditionalFiles.RelativePath = UI\Mobile\ShellMain\MbSchedule.xaml
+
+[C:/Users/QUOCHUY/source/repos/MyNote/MyNote/UI/Mobile/ShellMain/MbSetting.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.UI.Mobile.ShellMain.MbSetting.xaml
+build_metadata.AdditionalFiles.TargetPath = UI\Mobile\ShellMain\MbSetting.xaml
+build_metadata.AdditionalFiles.RelativePath = UI\Mobile\ShellMain\MbSetting.xaml
+
+[C:/Users/QUOCHUY/source/repos/MyNote/MyNote/UI/Mobile/ShellMain/MbTDTask.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.UI.Mobile.ShellMain.MbTDTask.xaml
+build_metadata.AdditionalFiles.TargetPath = UI\Mobile\ShellMain\MbTDTask.xaml
+build_metadata.AdditionalFiles.RelativePath = UI\Mobile\ShellMain\MbTDTask.xaml
+
+[C:/Users/QUOCHUY/source/repos/MyNote/MyNote/UI/Mobile/ShellMain/MbTodo.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.UI.Mobile.ShellMain.MbTodo.xaml
+build_metadata.AdditionalFiles.TargetPath = UI\Mobile\ShellMain\MbTodo.xaml
+build_metadata.AdditionalFiles.RelativePath = UI\Mobile\ShellMain\MbTodo.xaml
+
+[C:/Users/QUOCHUY/source/repos/MyNote/MyNote/UI/Mobile/ShellMain/MbUserDetail.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.UI.Mobile.ShellMain.MbUserDetail.xaml
+build_metadata.AdditionalFiles.TargetPath = UI\Mobile\ShellMain\MbUserDetail.xaml
+build_metadata.AdditionalFiles.RelativePath = UI\Mobile\ShellMain\MbUserDetail.xaml

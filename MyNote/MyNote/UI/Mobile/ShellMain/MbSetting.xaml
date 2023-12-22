@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyNote.UI.Mobile.ShellMain.MbSetting"
+             NavigationPage.HasNavigationBar="False"
+             Title="MbSetting">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="1,0">
+                <GradientStop Color="#f1f1f1"
+                          Offset="0.1" />
+                <GradientStop Color="#e7e7e7"
+                          Offset="1.0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <Frame Grid.Row="0" BorderColor="Transparent" Margin="5,5,5,5" Padding="0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="250"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Border Grid.Column="0" StrokeShape="RoundRectangle 50" WidthRequest="70"
+                        HeightRequest="70" StrokeThickness="2" Margin="0,0,0,0" 
+                        BackgroundColor="#C0AEC3">
+                    <ImageButton Source="user.svg" HeightRequest="65" WidthRequest="65" Clicked="UserDetail_Click"/>
+                </Border>
+                <VerticalStackLayout Grid.Column="1" HorizontalOptions="StartAndExpand"
+                                     Margin="0,18,0,0">
+                    <Label x:Name="lblName" TextColor="Black" FontFamily="InterBold"
+                           FontSize="20" />
+                    <HorizontalStackLayout>
+                        <Label x:Name="lblSex" TextColor="Black" FontFamily="InterRegular"/>
+                        <Label Text=" - " TextColor="Black" FontFamily="InterRegular"/>
+                        <Label x:Name="lblYear" TextColor="Black" FontFamily="InterRegular"/>
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+                <Button ImageSource="setting2.svg" Grid.Column="2" BackgroundColor="Transparent"/>
+            </Grid>
+        </Frame>
+        <Frame Grid.Row="1" Margin="5,5,5,5" BackgroundColor="Transparent" Padding="0"
+               BorderColor="Transparent" >
+            <VerticalStackLayout>
+                
+                <Frame HeightRequest="60" Padding="1" CornerRadius="30" BorderColor="Transparent"
+                       HorizontalOptions="Start" Margin="0,3,0,3">
+                    <Button ImageSource="about.svg" Text="About" TextColor="Black"  FontFamily="InterMedium"
+                            FontSize="17" WidthRequest="380" ContentLayout="0" 
+                            BorderWidth="2" BorderColor="LightGray" CornerRadius="30"
+                            BackgroundColor="White"/>
+                </Frame>
+                <Frame HeightRequest="60" Padding="1" CornerRadius="30" BorderColor="Transparent"
+                       HorizontalOptions="Start" Margin="0,3,0,3">
+                    <Button ImageSource="logout.svg" Text="Sign Out" TextColor="Black"  FontFamily="InterMedium"
+                            FontSize="17" WidthRequest="380" ContentLayout="0" 
+                            BorderWidth="2" BorderColor="LightGray" CornerRadius="30"
+                            BackgroundColor="White" Clicked="Logout_Click"/>
+                </Frame>
+            </VerticalStackLayout>
+        </Frame>
+        <Label Grid.Row="2" Text="Developed by HHHL" TextColor="#787878"
+               FontFamily="InterMedium" FontAttributes="Italic" FontSize="11" HorizontalOptions="Center"
+               CharacterSpacing="-1"/>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyNote.UI.Desktop.MainDesktop.DTNoteDetail"
+             xmlns:viewModels="clr-namespace:MyNote.ViewModels"
+             xmlns:models="clr-namespace:MyNote.Models"
+             xmlns:local="clr-namespace:MyNote.ViewModels"
+             NavigationPage.HasNavigationBar="False"
+             x:DataType="models:Note"
+             Title="DTNoteDetail">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="1,0">
+                <GradientStop Color="#f1f1f1"
+                          Offset="0.1" />
+                <GradientStop Color="#e7e7e7"
+                          Offset="1.0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Frame BorderColor="Transparent" Grid.Row="0">
+            <Frame.Background>
+                <LinearGradientBrush EndPoint="1,0">
+                    <GradientStop Color="#C664BE"
+                          Offset="0.1" />
+                    <GradientStop Color="#C0AEC3"
+                          Offset="1.0" />
+                </LinearGradientBrush>
+            </Frame.Background>
+        </Frame>
+        <Frame Grid.Row="1" Margin="5,10,5,5" Padding="0" BorderColor="Transparent"
+               CornerRadius="10" >
+            <CollectionView SelectionMode="None" x:Name="DetailView">
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:Note">
+                        <Frame HeightRequest="150" Padding="0" BackgroundColor="#ffe8f6"
+                               BorderColor="Transparent" Margin="0,0,0,15">
+
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="80"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Frame Grid.Row="0" Margin="5,10,5,5" Padding="0" BorderColor="Transparent"
+                                 CornerRadius="10" >
+                                    <Entry HeightRequest="76" Text="{Binding NoteName}" Margin="20,5,5,5"
+                   FontFamily="InterSemiBold" FontSize="20" TextColor="#737373"/>
+                                </Frame>
+                                <Frame Grid.Row="1" Margin="5,5,5,10" BorderColor="Transparent">
+                                    <ScrollView Margin="5">
+                                        <Editor x:Name="TextEditor"
+                        TextColor="#737373"
+                        FontSize="18"
+                        Placeholder="Enter your note"
+                        Text="{Binding NoteDetail}"
+                        AutoSize="TextChanges"
+                       />
+                                    </ScrollView>
+
+                                </Frame>
+                            </Grid>
+                        </Frame>
+
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Frame>
+        
+    </Grid>
+</ContentPage>

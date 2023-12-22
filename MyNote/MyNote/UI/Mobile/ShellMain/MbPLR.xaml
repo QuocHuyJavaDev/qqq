@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyNote.UI.Mobile.ShellMain.MbPLR"
+             NavigationPage.HasNavigationBar="False"
+             Title="MbPLR">
+    <Grid BackgroundColor="#D0D4E3">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="1,0">
+                <GradientStop Color="#FFF"
+                      Offset="0.1" />
+                <GradientStop Color="#D0D4E3"
+                      Offset="1.0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="410"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="55"/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <Frame Grid.Row="0" Margin="10,10,10,10" CornerRadius="40" BorderColor="#C0AEC3" HasShadow="True">
+            <Frame.Background>
+                <!-- StartPoint defaults to (0,0) -->
+                <LinearGradientBrush EndPoint="1,0">
+                    <GradientStop Color="#f1f1f1"
+                      Offset="0.1" />
+                    <GradientStop Color="#e8f1ff"
+                      Offset="1.0" />
+                </LinearGradientBrush>
+            </Frame.Background>
+            <VerticalStackLayout VerticalOptions="Center" Padding="20">
+                <Label Text="PROGRAM" FontFamily="InterBold" FontSize="28"
+                       FontAttributes="Italic" TextColor="#0066E7"/>
+                <Label Text="LANGUAGE" FontFamily="InterBold" FontSize="28"
+                       VerticalOptions="Center" HorizontalOptions="Center"
+                       TextColor="#0066E7" FontAttributes="Italic"/>
+                <Label Text="RECOGNITION" FontFamily="InterBold" FontSize="28"
+                       VerticalOptions="End" HorizontalOptions="End"
+                       TextColor="#0066E7" FontAttributes="Italic"/>
+            </VerticalStackLayout>
+            
+            
+        </Frame>
+        <Frame Grid.Row="1" Margin="5,0,5,10" BorderColor="#e8f1ff" Padding="0">
+            <ScrollView Margin="10,0,0,0">
+                <Editor x:Name="txtText"
+                TextColor="Black"
+                FontSize="17"
+                FontFamily="InterSemiBold"
+                Placeholder="Enter your note"
+                Text="{Binding NoteView.NoteDetail}"
+                AutoSize="TextChanges"
+               />
+            </ScrollView>
+        </Frame>
+        <Button Text="Check" Grid.Row="2" Clicked="btn" Margin="20,0,20,0"
+                BackgroundColor="#0066E7" FontFamily="InterBold" FontAttributes="Bold" TextColor="White" FontSize="15"/>
+        <Label Text="Result" Grid.Row="3" x:Name="lblrs" VerticalTextAlignment="Center"
+               HorizontalTextAlignment="Center" FontFamily="InterMedium" 
+               FontSize="15"/> 
+    </Grid>
+</ContentPage>

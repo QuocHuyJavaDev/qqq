@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyNote.UI.Desktop.ShellBase"
+             Shell.FlyoutBehavior="Disabled"
+             Shell.NavBarIsVisible="False"
+             xmlns:local="clr-namespace:MyNote.UI.Desktop.LoginRegister"
+             xmlns:view="clr-namespace:MyNote.UI.Desktop.MainDesktop">
+    
+    <ShellContent
+        Title="Login Page" FlyoutItemIsVisible="False" Shell.FlyoutBehavior="Disabled"
+        ContentTemplate="{DataTemplate local:DTLogin}"
+        Route="Login"
+        />
+    <TabBar x:Name="PhoneTabs">
+        <TabBar.Style>
+            <Style TargetType="Tab">
+                <Setter Property="Shell.TabBarBackgroundColor"
+        Value="White" />
+                <Setter Property="Shell.TabBarForegroundColor"
+        Value="Black" />
+                <Setter Property="Shell.TabBarUnselectedColor"
+        Value="Green" />
+            </Style>
+        </TabBar.Style>
+        <Tab Title="Home" Icon="home.png" >
+            <ShellContent ContentTemplate="{DataTemplate view:DTHome}" Route="DTHome"/>
+        </Tab>
+        <Tab Title="Notebook" Icon="notebook.png">
+            <ShellContent ContentTemplate="{DataTemplate view:DTNotebook}"/>
+        </Tab>
+        <Tab Title="Note" Icon="clipboard.png">
+            <ShellContent ContentTemplate="{DataTemplate view:DTAllNote}"/>
+        </Tab>
+        <Tab Title="Todo List" Icon="favorite.png">
+            <ShellContent ContentTemplate="{DataTemplate view:DTTodo}"/>
+        </Tab>
+        <Tab Title="Schedule" Icon="calendar.png">
+            <ShellContent ContentTemplate="{DataTemplate view:DTSchedule}"/>
+        </Tab>
+        <Tab Title="PLR" Icon="ai.png">
+            <ShellContent ContentTemplate="{DataTemplate view:DTPLR}"/>
+        </Tab>
+        <Tab Title="About MyNote" Icon="information.png">
+            <ShellContent ContentTemplate="{DataTemplate view:DTAbout}"/>
+        </Tab>
+        <Tab Title="Account" Icon="acc.png">
+            <ShellContent ContentTemplate="{DataTemplate view:DTAccount}"/>
+        </Tab>
+    </TabBar>
+</Shell>

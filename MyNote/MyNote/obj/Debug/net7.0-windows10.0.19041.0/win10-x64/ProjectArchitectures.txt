@@ -1,0 +1,1 @@
+C:\Users\QUOCHUY\source\repos\MyNote\MyNote\MyNote.csproj;x64

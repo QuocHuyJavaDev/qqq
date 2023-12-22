@@ -1,0 +1,264 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net7.0-android;net7.0-ios;net7.0-maccatalyst</TargetFrameworks>
+		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net7.0-windows10.0.19041.0</TargetFrameworks>
+		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
+		<!-- <TargetFrameworks>$(TargetFrameworks);net7.0-tizen</TargetFrameworks> -->
+		<OutputType>Exe</OutputType>
+		<RootNamespace>MyNote</RootNamespace>
+		<UseMaui>true</UseMaui>
+		<SingleProject>true</SingleProject>
+		<ImplicitUsings>enable</ImplicitUsings>
+
+		<!-- Display name -->
+		<ApplicationTitle>MyNote</ApplicationTitle>
+
+		<!-- App Identifier -->
+		<ApplicationId>com.companyname.mynote</ApplicationId>
+		<ApplicationIdGuid>1ddecce9-b2a5-4687-996a-fca2cb4bbb8d</ApplicationIdGuid>
+
+		<!-- Versions -->
+		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+		<ApplicationVersion>1</ApplicationVersion>
+
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">11.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">13.1</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
+		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<!-- App Icon -->
+		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
+
+		<!-- Splash Screen -->
+		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
+
+		<!-- Images -->
+		<MauiImage Include="Resources\Images\*" />
+		<MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
+		<MauiImage Update="Resources\Images\back.svg" BaseSize="35,35" />
+		<MauiImage Update="Resources\Images\editname.svg" BaseSize="30,30" />
+		<MauiImage Update="Resources\Images\close.svg" BaseSize="30,30" />
+		<MauiImage Update="Resources\Images\google.svg" BaseSize="56,56" />
+		<MauiImage Update="Resources\Images\facebook.svg" BaseSize="56,56" />
+		<MauiImage Update="Resources\Images\notebookmain.svg" BaseSize="50,50" />
+		<MauiImage Update="Resources\Images\edit.svg" BaseSize="25,25" />
+		<MauiImage Update="Resources\Images\del.svg" BaseSize="25,25" />
+		<MauiImage Update="Resources\Images\backnote.svg" BaseSize="30,30" />
+		<MauiImage Update="Resources\Images\favor.svg" BaseSize="30,30" />
+		<MauiImage Update="Resources\Images\unfavor.svg" BaseSize="30,30" />
+		<MauiImage Update="Resources\Images\more.svg" BaseSize="15,15" />
+		<MauiImage Update="Resources\Images\right.svg" BaseSize="20,20" />
+
+		<!-- Custom Fonts -->
+		<MauiFont Include="Resources\Fonts\*" />
+
+		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
+		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Resources\Fonts\Inter-Black.ttf" />
+	  <None Remove="Resources\Fonts\Inter-Bold.ttf" />
+	  <None Remove="Resources\Fonts\Inter-ExtraBold.ttf" />
+	  <None Remove="Resources\Fonts\Inter-ExtraLight.ttf" />
+	  <None Remove="Resources\Fonts\Inter-Light.ttf" />
+	  <None Remove="Resources\Fonts\Inter-Medium.ttf" />
+	  <None Remove="Resources\Fonts\Inter-Regular.ttf" />
+	  <None Remove="Resources\Fonts\Inter-SemiBold.ttf" />
+	  <None Remove="Resources\Fonts\Inter-Thin.ttf" />
+	  <None Remove="Resources\Images\acc.png" />
+	  <None Remove="Resources\Images\ai.png" />
+	  <None Remove="Resources\Images\ai.svg" />
+	  <None Remove="Resources\Images\back.svg" />
+	  <None Remove="Resources\Images\backnote.svg" />
+	  <None Remove="Resources\Images\calendar.png" />
+	  <None Remove="Resources\Images\calendar.svg" />
+	  <None Remove="Resources\Images\calendarr.png" />
+	  <None Remove="Resources\Images\check.png" />
+	  <None Remove="Resources\Images\check.svg" />
+	  <None Remove="Resources\Images\clipboard.png" />
+	  <None Remove="Resources\Images\close.svg" />
+	  <None Remove="Resources\Images\del.png" />
+	  <None Remove="Resources\Images\del.svg" />
+	  <None Remove="Resources\Images\delete.svg" />
+	  <None Remove="Resources\Images\edit.svg" />
+	  <None Remove="Resources\Images\editname.svg" />
+	  <None Remove="Resources\Images\export.svg" />
+	  <None Remove="Resources\Images\facebook.svg" />
+	  <None Remove="Resources\Images\favor.png" />
+	  <None Remove="Resources\Images\favor.svg" />
+	  <None Remove="Resources\Images\favorite.png" />
+	  <None Remove="Resources\Images\google.svg" />
+	  <None Remove="Resources\Images\home.png" />
+	  <None Remove="Resources\Images\homes.svg" />
+	  <None Remove="Resources\Images\information.png" />
+	  <None Remove="Resources\Images\introimg.png" />
+	  <None Remove="Resources\Images\more.svg" />
+	  <None Remove="Resources\Images\notebook.png" />
+	  <None Remove="Resources\Images\notebookmain.png" />
+	  <None Remove="Resources\Images\notebookmain.svg" />
+	  <None Remove="Resources\Images\notebooks.svg" />
+	  <None Remove="Resources\Images\notes.svg" />
+	  <None Remove="Resources\Images\notess.png" />
+	  <None Remove="Resources\Images\ntbicon.svg" />
+	  <None Remove="Resources\Images\right.svg" />
+	  <None Remove="Resources\Images\savenote.svg" />
+	  <None Remove="Resources\Images\schedule.svg" />
+	  <None Remove="Resources\Images\setting.svg" />
+	  <None Remove="Resources\Images\todoicon.png" />
+	  <None Remove="Resources\Images\todolist.svg" />
+	  <None Remove="Resources\Images\uncheck.png" />
+	  <None Remove="Resources\Images\uncheck.svg" />
+	  <None Remove="Resources\Images\unfavor.png" />
+	  <None Remove="Resources\Images\unfavor.svg" />
+	  <None Remove="Resources\Images\user.svg" />
+	  <None Remove="Resources\Images\watch.png" />
+	  <None Remove="Resources\Images\watch.svg" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="CommunityToolkit.Maui" Version="5.2.0" />
+		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.1.0" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+		<PackageReference Include="Plugin.LocalNotification" Version="10.1.8" />
+		<PackageReference Include="Syncfusion.Maui.Core" Version="23.2.6" />
+		<PackageReference Include="Syncfusion.Maui.Scheduler" Version="23.2.6" />
+		<PackageReference Include="Syncfusion.Pdf.NET" Version="24.1.41" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="UI\Desktop\DTPopup\DTAddEvent.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\Desktop\DTPopup\DTAddNtb.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\Desktop\DTPopup\DTEditEvent.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\Desktop\DTPopup\DTEditNtb.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\Desktop\LoginRegister\DTAddInfor.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\Desktop\LoginRegister\DTLogin.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\Desktop\LoginRegister\DTRegister.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\Desktop\MainDesktop\DTAbout.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\Desktop\MainDesktop\DTAccount.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\Desktop\MainDesktop\DTAllDetail.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\Desktop\MainDesktop\DTAllNote.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\Desktop\MainDesktop\DTHome.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\Desktop\MainDesktop\DTNotebook.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\Desktop\MainDesktop\DTNoteDetail.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\Desktop\MainDesktop\DTNoteList.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\Desktop\MainDesktop\DTPLR.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\Desktop\MainDesktop\DTSchedule.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\Desktop\MainDesktop\DTTask.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\Desktop\MainDesktop\DTTodo.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\Desktop\MainDesktop\NewPage1.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\Desktop\ShellBase.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\Mobile\LogRegIntr\Intro.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\Mobile\LogRegIntr\MbForgot.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\Mobile\LogRegIntr\MbInfor.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\Mobile\LogRegIntr\MbLogin.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\Mobile\LogRegIntr\MbRegister.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\Mobile\MbShell.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\Mobile\PopupView\AddNtb.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\Mobile\PopupView\EditNtb.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\Mobile\PopupView\MbAddEvent.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\Mobile\PopupView\MbEditEvent.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\Mobile\ShellMain\MbFavorDetail.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\Mobile\ShellMain\MbHome.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\Mobile\ShellMain\MbNDetail.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\Mobile\ShellMain\MbNotebook.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\Mobile\ShellMain\MBNoteList.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\Mobile\ShellMain\MbPLR.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\Mobile\ShellMain\MbSchedule.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\Mobile\ShellMain\MbSetting.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\Mobile\ShellMain\MbTDTask.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\Mobile\ShellMain\MbTodo.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UI\Mobile\ShellMain\MbUserDetail.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
+</Project>

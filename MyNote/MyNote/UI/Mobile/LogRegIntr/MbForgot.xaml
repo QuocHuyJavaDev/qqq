@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyNote.UI.Mobile.LogRegIntr.MbForgot"
+             Title="MbForgot"
+             NavigationPage.HasNavigationBar="False">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="1,0">
+                <GradientStop Color="#f1f1f1"
+                          Offset="0.1" />
+                <GradientStop Color="#e7e7e7"
+                          Offset="1.0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80" />
+            <RowDefinition Height="180" />
+            <RowDefinition Height="100" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Button Grid.Row="0" ImageSource="back.svg" WidthRequest="50"  
+                Clicked="back_click" BackgroundColor="Transparent" HorizontalOptions="Start"/>
+        <VerticalStackLayout Grid.Row="1" Margin="10,0,10,0">
+            <Label Text="My Note" TextColor="#a7a7a7" FontFamily="InterSemiBold" 
+                   FontSize="18"/>
+            <Label Text="Forgot" FontFamily="InterBold" FontSize="28"/>
+            <Label Text="Password?" FontFamily="InterBold" FontSize="28"/>
+        </VerticalStackLayout>
+        <Grid RowSpacing="5" Grid.Row="2" Margin="10,0,10,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="74"/>
+            </Grid.RowDefinitions>
+            <Frame Grid.Row="0" BackgroundColor="White" Padding="0" BorderColor="Transparent"
+                   HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="10,0,10,0">
+                <StackLayout Orientation="Horizontal">
+                    <Entry HeightRequest="53" x:Name="txtUserName" Placeholder="Username" PlaceholderColor="#cdcdcd"
+                           FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand"
+                           Margin="20,0,20,0" FontFamily="InterRegular" FontSize="15" TextColor="#737373"/>
+                    <Button Text="Check" FontFamily="InterMedium" FontAttributes="Bold"
+                            Clicked="Check_Click"/>
+                </StackLayout>
+            </Frame>
+
+            <Frame x:Name="framePass" Grid.Row="1" BackgroundColor="White" Padding="0" BorderColor="Transparent"
+                   HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="10,15,10,0"
+                   IsVisible="False">
+                <StackLayout Orientation="Horizontal">
+                    <Entry HeightRequest="55" x:Name="txtPassword"  Placeholder="Password" TextColor="#737373"
+                           FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand"
+                           Margin="20,0,20,0" FontSize="15" FontFamily="InterRegular" IsPassword="True"
+                           PlaceholderColor="#cdcdcd" IsVisible="False"/>
+                </StackLayout>
+            </Frame>
+        </Grid>
+        <Button Margin="30,0,30,0" HeightRequest="55" Grid.Row="3" Text="Sign In"
+                Clicked="Change_Click" BackgroundColor="#C664BE" CornerRadius="15"
+                FontFamily="InterBold" FontAttributes="Bold" TextColor="White">
+        </Button>
+    </Grid>
+</ContentPage>

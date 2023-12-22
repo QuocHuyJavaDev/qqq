@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyNote.UI.Mobile.ShellMain.MbUserDetail"
+             Title="MbUserDetail"
+             NavigationPage.HasNavigationBar="False">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="1,0">
+                <GradientStop Color="#f1f1f1"
+                          Offset="0.1" />
+                <GradientStop Color="#e7e7e7"
+                          Offset="1.0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="250"/>
+            <RowDefinition Height="350"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Button Grid.Row="0" ImageSource="back.svg" WidthRequest="50"  
+                Clicked="back_click" BackgroundColor="Transparent" HorizontalOptions="Start"/>
+        <StackLayout Grid.Row="1" Margin="0,50,0,0">
+            <Image Source="notebookmain.svg" BackgroundColor="Transparent"
+                       WidthRequest="60"/>
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Label Text="Edit your" FontSize="30" TextColor="#737373"
+                       FontFamily="InterBold" CharacterSpacing="-0.5" HorizontalOptions="Center"
+                       Margin="0,0,0,10"/>
+                <Label Text=" Information" FontSize="30" TextColor="#C664BE" FontAttributes="Bold"
+                       FontFamily="InterExtraBold" CharacterSpacing="-0.5" HorizontalOptions="Center"
+                       Margin="0,0,0,10"/>
+
+            </HorizontalStackLayout>
+
+            <Label Text="Next, please fill these forms" FontSize="19" TextColor="#737373"
+                       CharacterSpacing="-1" HorizontalOptions="Center" FontFamily="InterRegular"
+                       />
+            <Label Text="to change" FontSize="19" TextColor="#737373"
+                       CharacterSpacing="-1" HorizontalOptions="Center" FontFamily="InterRegular"
+                       />
+        </StackLayout>
+
+        <Grid RowSpacing="5" Grid.Row="2" Margin="20,20,20,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="74"/>
+                <RowDefinition Height="74"/>
+                <RowDefinition Height="74"/>
+            </Grid.RowDefinitions>
+            <Frame Grid.Row="0" BackgroundColor="White" Padding="0" BorderColor="Transparent"
+                   HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="10,0,10,0">
+                <StackLayout Orientation="Horizontal">
+                    <Entry HeightRequest="53" x:Name="txtUserName" Placeholder="Full name" PlaceholderColor="#cdcdcd"
+                           VerticalOptions="Center" HorizontalOptions="FillAndExpand"
+                           Margin="20,0,20,0" FontFamily="InterBold" FontSize="15" TextColor="#737373"/>
+                </StackLayout>
+            </Frame>
+
+            <Frame Grid.Row="1" BackgroundColor="White" Padding="0" BorderColor="Transparent"
+                   HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="10,15,10,0">
+                <StackLayout Orientation="Horizontal">
+                    <Entry HeightRequest="53" x:Name="txtmail"  Placeholder="Email (@gmail.com)" PlaceholderColor="#cdcdcd"
+                           VerticalOptions="Center" HorizontalOptions="FillAndExpand"
+                           Margin="20,0,20,0" FontFamily="InterBold" FontSize="15" TextColor="#737373"/>
+                </StackLayout>
+            </Frame>
+            <Frame Grid.Row="2" BackgroundColor="White" Padding="0" BorderColor="Transparent"
+                   HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="10,15,10,0">
+                <StackLayout Orientation="Horizontal">
+                    <DatePicker HeightRequest="55" x:Name="dpDOB" BackgroundColor="Transparent"
+                            Margin="20,0,20,0" FontFamily="InterBold" Format="dd/MM/yyyy"
+                            FontSize="15" TextColor="#737373"/>
+                </StackLayout>
+            </Frame>
+            <Frame Grid.Row="3" BackgroundColor="Transparent" Padding="0" BorderColor="Transparent"
+                   HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="10,15,10,0">
+
+                <HorizontalStackLayout Spacing="120" Margin="20,0,20,0" >
+                    <RadioButton x:Name="radbtnMan" Content="Man" Value="1" 
+                                 VerticalOptions="Center" FontFamily="InterBold"
+                                  FontSize="15" TextColor="#737373" HeightRequest="70"/>
+                    <RadioButton x:Name="radbtnWman" Content="Woman" Value="0" IsChecked="True" 
+                                 VerticalOptions="Center" FontFamily="InterBold"
+                                  FontSize="15" TextColor="#737373" />
+                </HorizontalStackLayout>
+
+            </Frame>
+        </Grid>
+        <Button Margin="30,0,30,100" HeightRequest="55" Grid.Row="3" Text="Done"
+                Clicked="Save_Click" BackgroundColor="#C664BE" CornerRadius="15"
+                FontFamily="InterBold" FontAttributes="Bold" TextColor="White">
+        </Button>
+
+
+    </Grid>
+</ContentPage>

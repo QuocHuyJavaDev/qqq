@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyNote.UI.Desktop.MainDesktop.DTSchedule"
+             xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler"
+             xmlns:local="clr-namespace:MyNote.ViewModels"
+             NavigationPage.HasNavigationBar="False"
+             Title="DTSchedule">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Frame BorderColor="Transparent" Grid.Row="0">
+            <Frame.Background>
+                <LinearGradientBrush EndPoint="1,0">
+                    <GradientStop Color="#C664BE"
+                          Offset="0.1" />
+                    <GradientStop Color="#C0AEC3"
+                          Offset="1.0" />
+                </LinearGradientBrush>
+            </Frame.Background>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Text="SCHEDULE" TextColor="White" FontFamily="InterExtraBold"
+                       FontAttributes="Bold" FontSize="18" Margin="0,5,0,0" />
+                <Button Grid.Column="1" Text="+ Add" WidthRequest="60" TextColor="White"
+                Clicked="AddNtb_Click" BackgroundColor="Transparent" HorizontalOptions="End"
+                        HeightRequest="32" CornerRadius="10" FontFamily="InterMedium"
+                        FontAttributes="Bold" Padding="0" FontSize="13" BorderColor="White"
+                        BorderWidth="2"/>
+            </Grid>
+            
+        </Frame>
+        <scheduler:SfScheduler View="Day" Grid.Row="1" x:Name="scheData"
+                           AllowedViews="Day,Agenda,Month,TimelineDay,TimelineMonth,TimelineWeek,
+                           TimelineWorkWeek,Week,WorkWeek"
+                           TodayHighlightBrush="Green"
+                           Tapped="Tap_Events"
+                           >
+
+            <scheduler:SfScheduler.BindingContext>
+                <local:ScheduleVM/>
+            </scheduler:SfScheduler.BindingContext>
+
+        </scheduler:SfScheduler>
+    </Grid>
+</ContentPage>

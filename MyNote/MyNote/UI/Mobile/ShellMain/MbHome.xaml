@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyNote.UI.Mobile.ShellMain.MbHome"
+             xmlns:viewModels="clr-namespace:MyNote.ViewModels"
+             xmlns:models="clr-namespace:MyNote.Models"
+             x:DataType="models:Note"
+             Title="MbHome"
+             NavigationPage.HasNavigationBar="False">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="1,0">
+                <GradientStop Color="#f1f1f1"
+                          Offset="0.1" />
+                <GradientStop Color="#e7e7e7"
+                          Offset="1.0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="180"/>
+            <RowDefinition Height="280"/>
+            <RowDefinition Height="235"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <Frame Grid.Row="0" Margin="10,10,10,10" CornerRadius="40" BorderColor="#C0AEC3" HasShadow="True">
+            <Frame.Background>
+                <LinearGradientBrush EndPoint="1,0">
+                    <GradientStop Color="#C664BE"
+                          Offset="0.1" />
+                    <GradientStop Color="#C0AEC3"
+                          Offset="1.0" />
+                </LinearGradientBrush>
+            </Frame.Background>
+            <StackLayout>
+                <HorizontalStackLayout>
+                    <Label Text="Welcome back, " HorizontalOptions="FillAndExpand" TextColor="White"
+                   FontSize="24" FontAttributes="Bold" FontFamily="InterMedium" Margin="0,0,0,0"/>
+                    <Label x:Name="lblName" HorizontalOptions="FillAndExpand" TextColor="White"
+                   FontSize="24" FontAttributes="Bold" FontFamily="InterMedium" Margin="0,0,0,0"/>
+                </HorizontalStackLayout>
+
+                <VerticalStackLayout Spacing="10" Margin="0,30,0,0" HorizontalOptions="Start">
+                    
+                    <Button Text="Create Todo List >>"  BackgroundColor="White" TextColor="#575757"
+                            FontFamily="InterBold" FontSize="15" WidthRequest="180" CornerRadius="30"
+                            Clicked="AddTodo_Click"/>
+                </VerticalStackLayout>
+            </StackLayout>
+        </Frame>
+        <Frame Grid.Row="2" BorderColor="Transparent" Margin="10,10,10,0">
+            <VerticalStackLayout>
+                <Label Text="FAVOTITE NOTES >" TextColor="#575757" FontFamily="InterExtraBold"
+                       FontAttributes="Bold" FontSize="15"/>
+                <CollectionView x:Name="FavorView">
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Orientation="Horizontal"/>
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="models:Note">
+                            <SwipeView>
+                                <VisualStateManager.VisualStateGroups>
+                                    <VisualStateGroup Name="CommonStates">
+                                        <VisualState Name="Normal" />
+                                        <VisualState Name="Selected">
+                                            <VisualState.Setters>
+                                                <Setter Property="BackgroundColor" Value="Transparent" />
+                                            </VisualState.Setters>
+                                        </VisualState>
+
+                                    </VisualStateGroup>
+                                </VisualStateManager.VisualStateGroups>
+                                <Frame HeightRequest="160" WidthRequest="103" Padding="0"
+                               BorderColor="Transparent" Margin="0,5,5,0"
+                                       BackgroundColor="#ffebfe">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="35"></RowDefinition>
+                                            <RowDefinition Height="*"></RowDefinition>
+                                        </Grid.RowDefinitions>
+                                        <Label Grid.Row="0" Text="{Binding NoteName}" TextColor="Black"
+                                        HeightRequest="30" BackgroundColor="Transparent" LineBreakMode="TailTruncation"
+                                         FontFamily="InterSemiBold" CharacterSpacing="-1.3" MaxLines="6"
+                                        FontSize="13" HorizontalOptions="Start" Margin="10,10,10,0"
+                                               VerticalOptions="StartAndExpand"/>
+                                        <Label x:Name="lblDetail" Text="{Binding NoteDetail}" TextColor="#8d8d8d"
+                                       FontFamily="InterRegular" FontSize="11" FontAttributes="Italic"
+                                       Margin="10,0,10,0" MaxLines="6" LineBreakMode="TailTruncation"
+                                           HeightRequest="50" Grid.Row="1" VerticalOptions="StartAndExpand"/>
+
+                                        <Button x:Name="btnViewMore" Grid.RowSpan="2" BackgroundColor="Transparent" 
+                                                FontFamily="InterBold" FontSize="12" Padding="0"
+                                                FontAttributes="Italic" Clicked="Detai_Click"/>
+                                    </Grid>
+                                </Frame>
+                            </SwipeView>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </VerticalStackLayout>
+        </Frame>
+        <Frame Grid.Row="1" Margin="10,10,10,10" BorderColor="Transparent">
+            <VerticalStackLayout>
+                <Label Text="DRAFTING PAPER" TextColor="#575757" FontFamily="InterExtraBold"
+                       FontAttributes="Bold" FontSize="15"/>
+                <Frame Padding="0" BorderColor="Transparent" BackgroundColor="#ffe3c1"  >
+                    <Grid ColumnDefinitions="*" RowDefinitions="*">
+                        <ScrollView Margin="5">
+                            <Editor x:Name="TextEditor"
+                                TextColor="#575757"
+                                FontFamily="InterMedium"
+                                FontSize="15"
+                                Placeholder="Enter your drafting ..."
+                                PlaceholderColor="#cdcdcd"         
+                                HeightRequest="180"
+                                AutoSize="TextChanges"/>
+                        </ScrollView>
+                    </Grid>
+                </Frame>
+                
+            </VerticalStackLayout>
+
+        </Frame>
+        <Label Grid.Row="3" Text="Developed by HHHL" TextColor="#787878"
+               FontFamily="InterMedium" FontAttributes="Italic" FontSize="11" HorizontalOptions="Center"
+               Margin="0,0,0,0" CharacterSpacing="-1" 
+               VerticalOptions="Center"/>
+
+    </Grid>
+</ContentPage>

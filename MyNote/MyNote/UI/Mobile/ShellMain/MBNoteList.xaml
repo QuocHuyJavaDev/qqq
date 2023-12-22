@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:MyNote.ViewModels"
+             xmlns:models="clr-namespace:MyNote.Models"
+             x:DataType="models:Note"
+             x:Class="MyNote.UI.Mobile.ShellMain.MBNoteList"
+             NavigationPage.HasNavigationBar="False"
+             Title="MBNoteList">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="1,0">
+                <GradientStop Color="#f1f1f1"
+                          Offset="0.1" />
+                <GradientStop Color="#e7e7e7"
+                          Offset="1.0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Frame BorderColor="Transparent" Grid.Row="0" Padding="5">
+            <Frame.Background>
+                <LinearGradientBrush EndPoint="1,0">
+                    <GradientStop Color="#f1f1f1"
+                          Offset="0.1" />
+                    <GradientStop Color="#e7e7e7"
+                          Offset="1.0" />
+                </LinearGradientBrush>
+            </Frame.Background>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" ImageSource="backnote.svg" WidthRequest="50"  
+                Clicked="back_click" BackgroundColor="Transparent" HorizontalOptions="Start"
+                        VerticalOptions="Center"/>
+                <Label Grid.Column="1" x:Name="lbNtbName" TextColor="#C664BE" FontFamily="InterExtraBold"
+                       FontAttributes="Bold" FontSize="20" Margin="0,0,0,0" 
+                       HorizontalOptions="Center" VerticalOptions="Center"/>
+                <Button Text="+ Add" WidthRequest="60" TextColor="#C664BE" Grid.Column="2"
+                Clicked="Add_Click" BackgroundColor="Transparent"  Margin="0,0,10,0"
+                        HeightRequest="32" CornerRadius="30" FontFamily="InterMedium"
+                        FontAttributes="Bold" Padding="0" FontSize="13" BorderColor="#C664BE"
+                        BorderWidth="2" HorizontalOptions="EndAndExpand">
+                </Button>
+                <BoxView HorizontalOptions="Start" Grid.ColumnSpan="3"
+                     VerticalOptions="EndAndExpand" HeightRequest="0.5"
+                     BackgroundColor="#C664BE"
+                     Color="#C664BE" ></BoxView>
+            </Grid>
+
+        </Frame>
+        <Frame Grid.Row="1" Margin="5,10,5,5" Padding="0" BorderColor="Transparent"
+               CornerRadius="40">
+            <SearchBar x:Name="searchNote" Placeholder="Search note ..."
+                       HeightRequest="60" TextColor="#575757" WidthRequest="400"
+                       FontFamily="InterMedium" FontSize="16" PlaceholderColor="#cdcdcd"
+                       TextChanged="Search_TC"
+                       ></SearchBar>
+        </Frame>
+        <Frame Grid.Row="2" Margin="5,5,5,10" BorderColor="Transparent" Padding="0">
+            <CollectionView x:Name="noteView">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical"
+                        Span="2" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:Note">
+
+                        <Frame HeightRequest="180" WidthRequest="180" Padding="0" 
+                                   BackgroundColor="#ffe8f6" Margin="0,10,0,0"
+                               BorderColor="Transparent" HorizontalOptions="Center">
+                            <StackLayout>
+                                <Label Grid.Row="0" Grid.Column="0" Text="{Binding NoteName}" TextColor="Black"
+                                        HeightRequest="30" BackgroundColor="Transparent"
+                                         FontFamily="InterSemiBold" WidthRequest="330" CharacterSpacing="-1.3"
+                                        FontSize="15" HorizontalOptions="Start" Margin="10,10,0,0"/>
+                                <Label x:Name="lblDetail" Grid.Row="0" Grid.Column="0" Text="{Binding NoteDetail}" TextColor="#8d8d8d"
+                                       FontFamily="InterRegular" FontSize="12" FontAttributes="Italic"
+                                       Margin="10,0,10,0" MaxLines="6" LineBreakMode="TailTruncation"
+                                           HeightRequest="50"/>
+
+                                <Button x:Name="btnViewMore"  Text="View more ..." Grid.Row="0" Grid.Column="1"
+                                        HeightRequest="35" WidthRequest="85" Margin="45,0,10,10"
+                                        BackgroundColor="#C664BE" TextColor="White" CornerRadius="50"
+                                             FontFamily="InterBold" FontSize="12" HorizontalOptions="End"
+                                            FontAttributes="Italic" Clicked="Detai_Click"
+                                            Padding="0" VerticalOptions="EndAndExpand"/>
+
+                            </StackLayout>
+                        </Frame>
+
+
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </Frame>
+    </Grid>
+</ContentPage>

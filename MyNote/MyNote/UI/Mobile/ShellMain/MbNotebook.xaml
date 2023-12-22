@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyNote.UI.Mobile.ShellMain.MbNotebook"
+             xmlns:viewModels="clr-namespace:MyNote.ViewModels"
+             xmlns:models="clr-namespace:MyNote.Models"
+             x:DataType="viewModels:NotebookVM"
+             NavigationPage.HasNavigationBar="False"
+             Title="MbNotebook">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="1,0">
+                <GradientStop Color="#FFF"
+                          Offset="0.1" />
+                <GradientStop Color="#C0AEC3"
+                          Offset="1.0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Frame BorderColor="Transparent" Grid.Row="0">
+            <Frame.Background>
+                <LinearGradientBrush EndPoint="1,0">
+                    <GradientStop Color="#C664BE"
+                          Offset="0.1" />
+                    <GradientStop Color="#C0AEC3"
+                          Offset="1.0" />
+                </LinearGradientBrush>
+            </Frame.Background>
+            <HorizontalStackLayout Spacing="190">
+                <Label Text="NOTEBOOK" TextColor="White" FontFamily="InterExtraBold"
+                       FontAttributes="Bold" FontSize="18" Margin="0,5,0,0" />
+                <Button Grid.Row="0" Text="+ Add" WidthRequest="60" TextColor="White"
+                Clicked="AddNtb_Click" BackgroundColor="Transparent" HorizontalOptions="Start"
+                        HeightRequest="32" CornerRadius="30" FontFamily="InterMedium"
+                        FontAttributes="Bold" Padding="0" FontSize="13" BorderColor="White"
+                        BorderWidth="2"/>
+            </HorizontalStackLayout>
+        </Frame>
+        <Frame Grid.Row="1" Margin="5,10,5,5" Padding="0" BorderColor="Transparent"
+               CornerRadius="40">
+            <SearchBar x:Name="searchNotebook" Placeholder="Search notebook ..."
+                       HeightRequest="60" TextColor="#575757" WidthRequest="400"
+                       FontFamily="InterMedium" FontSize="16" PlaceholderColor="#cdcdcd"
+                       TextChanged="Search_TC"
+                       ></SearchBar>
+        </Frame>
+        <Frame Grid.Row="2" Margin="5,5,5,10" BorderColor="Transparent">
+            <Frame.Background>
+                <LinearGradientBrush EndPoint="1,0">
+                    <GradientStop Color="#f1f1f1"
+                                         Offset="0.1" />
+                    <GradientStop Color="#e7e7e7"
+                                        Offset="1.0" />
+                </LinearGradientBrush>
+            </Frame.Background>
+            <CollectionView x:Name="View1" ItemsSource="{Binding ntbList}" >
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:Notebook">
+                        <SwipeView>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup Name="CommonStates">
+                                    <VisualState Name="Normal" />
+                                    <VisualState Name="Selected">
+                                        <VisualState.Setters>
+                                            <Setter Property="BackgroundColor" Value="Transparent" />
+                                        </VisualState.Setters>
+                                    </VisualState>
+
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Frame HeightRequest="80" Padding="0"
+                               BorderColor="Transparent" Margin="0,0,0,10">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="80" />
+                                        <ColumnDefinition Width="150" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="45" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <Button Grid.RowSpan="2" Grid.ColumnSpan="2" BackgroundColor="Transparent"
+                                            Clicked="Tap_Click"/>
+                                    <Frame Grid.Column="0" Grid.RowSpan="2" Margin="10,12,12,12"
+                                           BackgroundColor="#f898d5" BorderColor="Transparent"
+                                           CornerRadius="15">
+                                        <Image Source="ntbicon.svg" HeightRequest="40"
+                                               WidthRequest="40" Opacity="0.8"/>
+                                    </Frame>
+                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding NotebookName}" 
+                                        HeightRequest="50" BackgroundColor="Transparent"
+                                         FontFamily="InterMedium" WidthRequest="100" TextColor="Black"
+                                           FontAttributes="Bold" FontSize="18" HorizontalOptions="Start" 
+                                           Margin="0,42,0,0"/>
+                                    <Label Grid.Row="1" Grid.Column="1" Text="{Binding DateCreate}" TextColor="#8d8d8d"
+                                       FontFamily="InterMedium" FontSize="10" FontAttributes="Italic"
+                                       Margin="0,0,0,15"/>
+                                    <HorizontalStackLayout Grid.Column="2"
+                                           Grid.RowSpan="2" Spacing="5" HorizontalOptions="End"
+                                                           Margin="0,0,10,0">
+                                        <Button BackgroundColor="#099d02" ImageSource="edit.svg"
+                                                 VerticalOptions="Center" HorizontalOptions="Center"
+                                           HeightRequest="45" WidthRequest="45"  BorderColor="Transparent" 
+                                           CornerRadius="75" Clicked="Edit_Click"/>
+                                        <Button BackgroundColor="#e53529"  VerticalOptions="Center" HorizontalOptions="Center"
+                                           HeightRequest="45" WidthRequest="45"  BorderColor="Transparent" 
+                                           CornerRadius="75" Clicked="Del_Click" ImageSource="del.svg"/>
+
+                                    </HorizontalStackLayout>
+
+
+
+                                </Grid>
+                            </Frame>
+                        </SwipeView>
+
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </Frame>
+    </Grid>
+</ContentPage>

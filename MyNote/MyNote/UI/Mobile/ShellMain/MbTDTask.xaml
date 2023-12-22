@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyNote.UI.Mobile.ShellMain.MbTDTask"
+             xmlns:viewModels="clr-namespace:MyNote.ViewModels"
+             xmlns:models="clr-namespace:MyNote.Models"
+             xmlns:local="clr-namespace:MyNote.ViewModels"
+             x:DataType="viewModels:TDTaskVM"
+             NavigationPage.HasNavigationBar="False"
+             Title="MbTDTask">
+    <ContentPage.BindingContext>
+        <local:TDTaskVM />
+    </ContentPage.BindingContext>
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="1,0">
+                <GradientStop Color="#f1f1f1"
+                          Offset="0.1" />
+                <GradientStop Color="#e7e7e7"
+                          Offset="1.0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Frame BorderColor="Transparent" Grid.Row="0" Padding="5">
+            <Frame.Background>
+                <LinearGradientBrush EndPoint="1,0">
+                    <GradientStop Color="#f1f1f1"
+                          Offset="0.1" />
+                    <GradientStop Color="#e7e7e7"
+                          Offset="1.0" />
+                </LinearGradientBrush>
+            </Frame.Background>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" ImageSource="backnote.svg" WidthRequest="50"  
+                Clicked="back_click" BackgroundColor="Transparent" HorizontalOptions="Start"
+                       VerticalOptions="Center" />
+                <Button Text="+ Add" WidthRequest="60" TextColor="#C664BE" Grid.Column="2"
+                Clicked="Add_Click" BackgroundColor="Transparent"  Margin="0,0,10,0"
+                        HeightRequest="32" CornerRadius="30" FontFamily="InterMedium"
+                        FontAttributes="Bold" Padding="0" FontSize="13" BorderColor="#C664BE"
+                        BorderWidth="2" HorizontalOptions="EndAndExpand">
+                </Button>
+                <BoxView HorizontalOptions="Start" Grid.ColumnSpan="3"
+                     VerticalOptions="EndAndExpand" HeightRequest="0.5"
+                     BackgroundColor="#C664BE"
+                     Color="#C664BE" ></BoxView>
+            </Grid>
+
+        </Frame>
+        <Frame Grid.Row="1" Margin="5,10,5,5" Padding="0" BorderColor="Transparent"
+               CornerRadius="40">
+            <SearchBar x:Name="searchTodo" Placeholder="Search to do list ..."
+                       HeightRequest="60" TextColor="#575757" WidthRequest="400"
+                       FontFamily="InterMedium" FontSize="16" PlaceholderColor="#cdcdcd"
+                       TextChanged="Search_TC"
+                       ></SearchBar>
+        </Frame>
+        <Frame Grid.Row="2" Margin="5,5,5,0" Padding="0" BorderColor="Transparent"
+               CornerRadius="10" BackgroundColor="Transparent">
+            <HorizontalStackLayout>
+                <Entry x:Name="TodoTit" Margin="10,0,5,0" BackgroundColor="Transparent"
+                   FontFamily="InterBold" FontSize="23" TextColor="#C664BE" Placeholder="Title"
+                   FontAttributes="Bold"  Completed="EditName_Complete"/>
+            </HorizontalStackLayout>
+
+        </Frame>
+        <Frame Grid.Row="3" Margin="5,0,5,10" BorderColor="Transparent" Padding="0">
+            <CollectionView x:Name="todoView" >
+
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical"
+                         />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:TodoTask">
+
+                        <Frame HeightRequest="70" WidthRequest="360" Padding="0" 
+                                   BackgroundColor="#ffe8f6" Margin="0,10,0,0"
+                               BorderColor="Transparent" HorizontalOptions="Center"
+                               CornerRadius="20">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ImageButton Grid.Column="0" ClassId="btnUncheck" x:Name="btnUncheck" Source="uncheck.svg"
+                                  Margin="20,0,0,0" HeightRequest="20" Clicked="unCheck_click">
+                                    <ImageButton.Triggers>
+                                        <DataTrigger TargetType="ImageButton"
+                                                     Binding="{Binding Source={x:Reference lbisdone}, Path=Text}"
+                                                     Value="0">
+                                            <Setter Property="IsVisible"
+                                                    Value="True" />
+
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="ImageButton"
+                                                     Binding="{Binding Source={x:Reference lbisdone}, Path=Text}"
+                                                     Value="1">
+                                            <Setter Property="IsVisible"
+                                                    Value="False" />
+
+                                        </DataTrigger>
+                                    </ImageButton.Triggers>
+                                </ImageButton>
+                                <ImageButton Grid.Column="0" ClassId="btncheck" x:Name="btncheck" Source="check.svg"
+                                  Margin="20,0,0,0" HeightRequest="20" Clicked="Check_click">
+                                    <ImageButton.Triggers>
+                                        <DataTrigger TargetType="ImageButton"
+                                                     Binding="{Binding Source={x:Reference lbisdone}, Path=Text}"
+                                                     Value="0">
+                                            <Setter Property="IsVisible"
+                                                    Value="False" />
+
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="ImageButton"
+                                                     Binding="{Binding Source={x:Reference lbisdone}, Path=Text}"
+                                                     Value="1">
+                                            <Setter Property="IsVisible"
+                                                    Value="True" />
+
+                                        </DataTrigger>
+                                    </ImageButton.Triggers>
+                                </ImageButton>
+
+
+                                <Entry Grid.Column="1" Grid.Row="0" Text="{Binding TaskName}" TextColor="Black"
+                                        HeightRequest="40" BackgroundColor="Transparent" x:Name="ettaskName"
+                                         FontFamily="InterSemiBold" WidthRequest="330" CharacterSpacing="-1.3"
+                                        FontSize="18" HorizontalOptions="Start" VerticalOptions="CenterAndExpand"
+                                       Margin="10,2,0,0" Completed="Task_Compete">
+                                    <Entry.Triggers>
+                                        <DataTrigger TargetType="Entry"
+                                                     Binding="{Binding Source={x:Reference btncheck}, Path=IsVisible}"
+                                                     Value="true">
+                                            <Setter Property="TextColor"
+                                                    Value="Green" />
+                                            <Setter Property="FontAttributes"
+                                                    Value="Bold" />
+                                        </DataTrigger>
+                                    </Entry.Triggers>
+                                </Entry>
+                                <Label Grid.Column="2" Grid.Row="0" Text="{Binding IsDone}"  TextColor="Black"
+                                        HeightRequest="40" BackgroundColor="Transparent" x:Name="lbisdone"
+                                         FontFamily="InterSemiBold" WidthRequest="30" CharacterSpacing="-1.3"
+                                        FontSize="18" HorizontalOptions="Start" VerticalOptions="CenterAndExpand"
+                                       Margin="0,0,0,0" IsVisible="False"/>
+
+                                <HorizontalStackLayout Grid.Column="3"
+                                           Spacing="5" HorizontalOptions="End"
+                                                           Margin="0,0,10,0">
+
+                                    <Button BackgroundColor="#e53529"  VerticalOptions="Center" HorizontalOptions="Center"
+                                           HeightRequest="35" WidthRequest="35"  BorderColor="Transparent" 
+                                           CornerRadius="75" Clicked="Del_Click" ImageSource="del.svg"/>
+                                </HorizontalStackLayout>
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Frame>
+    </Grid>
+</ContentPage>

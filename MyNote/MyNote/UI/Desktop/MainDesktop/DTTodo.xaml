@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyNote.UI.Desktop.MainDesktop.DTTodo"
+             xmlns:viewModels="clr-namespace:MyNote.ViewModels"
+             xmlns:models="clr-namespace:MyNote.Models"
+             x:DataType="viewModels:TodoVM"
+             NavigationPage.HasNavigationBar="False"
+             Title="DTTodo">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="1,0">
+                <GradientStop Color="#f1f1f1"
+                          Offset="0.1" />
+                <GradientStop Color="#e7e7e7"
+                          Offset="1.0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="120"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Frame BorderColor="Transparent" Grid.Row="0">
+            <Frame.Background>
+                <LinearGradientBrush EndPoint="1,0">
+                    <GradientStop Color="#C664BE"
+                          Offset="0.1" />
+                    <GradientStop Color="#C0AEC3"
+                          Offset="1.0" />
+                </LinearGradientBrush>
+            </Frame.Background>
+            <Grid Margin="10,0, 0,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="180"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Label Text="TODO LIST" TextColor="White" FontFamily="InterExtraBold"
+                       FontAttributes="Bold" FontSize="18" Margin="0,0,0,0"
+                       Grid.Column="0" Grid.Row="0"/>
+                <Frame Grid.Column="1" Grid.Row="0" Padding="0" BorderColor="White"
+               CornerRadius="10" WidthRequest="200" HeightRequest="30"
+                       BackgroundColor="Transparent" HorizontalOptions="End"
+                       Margin="0,0,30,0">
+                    <SearchBar x:Name="searchNtebook" HorizontalTextAlignment="Start"
+                               HorizontalOptions="Center" Placeholder="Search"
+                               HeightRequest="30" TextColor="White" WidthRequest="200"
+                               FontFamily="InterRegular" FontSize="13"
+                               PlaceholderColor="LightGray" VerticalTextAlignment="Center"
+                               TextChanged="Search_TC"></SearchBar>
+                </Frame>
+                <HorizontalStackLayout Grid.Row="1" Grid.Column="0" 
+                                       HorizontalOptions="Fill" Margin="0,15,0,0">
+                    <Label Text="3" TextColor="White" FontFamily="InterMedium"/>
+                    <Label Text="Todo List" TextColor="White" FontFamily="InterMedium"/>
+                </HorizontalStackLayout>
+                <Button Text="Add Todo List" Grid.Row="1" Grid.Column="1"
+                        WidthRequest="125" BackgroundColor="Transparent"
+                        BorderColor="Transparent"  Margin="0,6,0,0"
+                        HorizontalOptions="End" Clicked="Add_Click"/>
+            </Grid>
+        </Frame>
+        <ScrollView Grid.Row="1" >
+            <Frame  Margin="5,5,5,10" BorderColor="Transparent">
+                <CollectionView x:Name="todoView">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="models:TodoMain">
+                            <Frame HeightRequest="60" Padding="0" BackgroundColor="Transparent"
+                               BorderColor="Transparent">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="50" />
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="50" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <Image Source="todoicon.png" Grid.Row="0" Grid.Column="0"
+                                       HeightRequest="25" Margin="0,0,0,0"/>
+                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding MainName}" TextColor="#575757"
+                                        HeightRequest="50" BackgroundColor="Transparent"
+                                         FontFamily="InterMedium" WidthRequest="200"
+                                        FontSize="17" HorizontalOptions="Start" Margin="0,35,0,0"/>
+                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding DateMain}" TextColor="#8d8d8d"
+                                       FontFamily="InterMedium" FontSize="12" FontAttributes="Italic"
+                                       Margin="0,25,20,0" HorizontalOptions="EndAndExpand"/>
+                                    <Button Grid.ColumnSpan="2" BackgroundColor="Transparent"
+                                            BorderColor="Transparent" Clicked="Tap_Click"/>
+                                    <BoxView Grid.Row="1" HorizontalOptions="FillAndExpand"
+                                         VerticalOptions="Center" HeightRequest="2"
+                                         BackgroundColor="Black" Grid.ColumnSpan="4"></BoxView>
+                                </Grid>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+            </Frame>
+        </ScrollView>
+    </Grid>
+</ContentPage>
